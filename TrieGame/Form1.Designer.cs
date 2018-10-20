@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Input = new System.Windows.Forms.TextBox();
+            this.Results = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // label1
@@ -41,20 +42,29 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Trie Me";
             // 
-            // textBox1
+            // Input
             // 
-            this.textBox1.Location = new System.Drawing.Point(16, 38);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(195, 20);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.Input.Location = new System.Drawing.Point(16, 38);
+            this.Input.Name = "Input";
+            this.Input.Size = new System.Drawing.Size(195, 20);
+            this.Input.TabIndex = 1;
+            this.Input.TextChanged += new System.EventHandler(this.Input_TextChanged);
+            // 
+            // Results
+            // 
+            this.Results.FormattingEnabled = true;
+            this.Results.Location = new System.Drawing.Point(16, 93);
+            this.Results.Name = "Results";
+            this.Results.Size = new System.Drawing.Size(195, 316);
+            this.Results.TabIndex = 2;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(656, 446);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Results);
+            this.Controls.Add(this.Input);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -66,7 +76,8 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Input;
+        private System.Windows.Forms.ListBox Results;
     }
 }
 

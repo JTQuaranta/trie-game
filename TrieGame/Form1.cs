@@ -21,12 +21,21 @@ namespace TrieGame
             InitializeComponent();
             _trie = new Trie();
             _result = new List<string>();
-            _trie.Build(File.ReadAllLines("wordsEn.txt"));
+            string f = Properties.Resources.wordsEn; //next stop, sort into string[]
+            _trie.Build("farts");
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void Input_TextChanged(object sender, EventArgs e)
         {
+            Results.Items.Clear();
 
+            if (Input.Text == "")
+            {
+                Input.Text = "";
+            }
+
+            _result = _trie.getList(Input.Text);
+            Results.Items.AddRange(_result.ToArray());
         }
     }
 }
