@@ -23,18 +23,18 @@ namespace TrieGame
 
         #region Methods
 
-        protected void addSub(TrieNode sub)
+        public void addSub(TrieNode sub)
         {
             this._subs.Add(sub);
         }
 
         public TrieNode getChild(char c)
         {
-            foreach (TrieNode item in this._subs)
+            foreach (TrieNode n in this._subs)
             {
-                if (item.Value == c)
+                if (n.Value == c)
                 {
-                    return item;
+                    return n;
                 }
             }
             return null;
